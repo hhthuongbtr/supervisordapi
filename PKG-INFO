@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: supervisordapi
+Version: 0.0.1
+Summary: supervisord API
+Home-page: https://github.com/hhthuongbtr/supervisordapi.git
+Author: Thuong Huynh
+Author-email: hhthuongbtr@gmail.com
+License: UNKNOWN
+Description: 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
