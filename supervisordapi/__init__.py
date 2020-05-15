@@ -1,7 +1,3 @@
-try:
-    import xmlrpclib
-except:
-    import xmlrpc.client as xmlrpclib
 import os, time
 import logging
 import threading
@@ -14,7 +10,13 @@ class SupervisordApi:
         self.port = port if port else 9001
         try:
             server_url = "http://%s:%d/RPC2"%(self.host, self.port)
-            self.server = xmlrpclib.Server(server_url)
+            self.server = None
+            try:
+                import xmlrpclib
+                self.server = xmlrpclib.Server(server_url)
+            except:
+                from xmlrpc.client import ServerProxy
+                self.server = ServerProxy(server_url)
         except Exception as e:
             #self.logger.error("Error: %s"%(str(e)))
             raise e
