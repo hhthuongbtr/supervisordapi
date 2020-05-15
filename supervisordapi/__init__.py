@@ -1,4 +1,7 @@
-import xmlrpclib
+try:
+    import xmlrpclib
+except:
+    import xmlrpc.client as xmlrpclib
 import os, time
 import logging
 import threading
